@@ -7,6 +7,7 @@ var fourSum = function (nums, target) {
     let result = [];
     nums = nums.sort((a, b) => a - b);
     let n = nums.length;
+    if (n < 4) return result;
     for (let i = 0; i < n - 3; i++) {
         if (i > 0 && nums[i] === nums[i - 1]) continue;
         for (let j = i + 1; j < n - 2; j++) {
